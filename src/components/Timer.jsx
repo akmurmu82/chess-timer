@@ -39,7 +39,7 @@ function Timer({ isTimerRunning, playerName }) {
     }, 1000);
 
     return () => clearInterval(timerId);
-  }, [isGameStarted, isTimerRunning, timerState]);
+  }, [isGameStarted, isTimerRunning]);
 
   function handleClick() {
     if (!isGameStarted) {
@@ -56,13 +56,17 @@ function Timer({ isTimerRunning, playerName }) {
       color="#fff"
       onClick={handleClick}
       h={"46%"}
+      style={playerName == "Player 1" ? { transform: "rotate(180deg)" } : {}}
     >
-      <Flex>
+      <VStack>
         <Text>Moves: {timerState.moves}</Text>
-        <Text>Player Name: {playerName}</Text>
-      </Flex>
-      <Text fontSize={{ base: "xl", lg: "150px" }}>
-        {timerState.minutes}:{timerState.seconds < 10 ? `0${timerState.seconds}` : timerState.seconds}
+        <Text fontSize={"30px"}>{playerName}</Text>
+      </VStack>
+      <Text fontSize={{ base: "150px", lg: "150px" }}>
+        {timerState.minutes}:
+        {timerState.seconds < 10
+          ? `0${timerState.seconds}`
+          : timerState.seconds}
       </Text>
     </VStack>
   );
