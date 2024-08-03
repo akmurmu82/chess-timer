@@ -38,7 +38,7 @@ function App() {
         h={"100vh"}
         bg={"#f3f3f3"}
         m="auto"
-        border="1px solid"
+        // border="1px solid"
       >
         <Timer isTimerRunning={!isPlayerOneMove} playerName={"Player 1"} />
         <Flex

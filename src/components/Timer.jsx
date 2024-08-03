@@ -55,11 +55,12 @@ function Timer({ isTimerRunning, playerName }) {
       bg={isGameStarted && isTimerRunning ? "#42b72a" : "#b7cbd4"}
       color="#fff"
       onClick={handleClick}
-      h={"46%"}
+      h={"46vh"}
+      p={2}
       style={playerName == "Player 1" ? { transform: "rotate(180deg)" } : {}}
     >
       <VStack>
-        <Text>Moves: {timerState.moves}</Text>
+        <Text fontSize={"20px"}>Moves: {timerState.moves}</Text>
         <Text fontSize={"30px"}>{playerName}</Text>
       </VStack>
       <Text fontSize={{ base: "150px", lg: "150px" }}>
