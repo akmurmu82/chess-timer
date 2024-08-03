@@ -7,7 +7,7 @@ function Timer({ isTimerRunning, playerName }) {
   // const [minutes, setMinutes] = useState(2);
   // const [seconds, setSeconds] = useState(0);
   const [timerState, setTimerState] = useState({
-    minutes: 2,
+    minutes: 10,
     seconds: 0,
     moves: 0,
   });
